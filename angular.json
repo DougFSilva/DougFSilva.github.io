@@ -114,7 +114,7 @@
         "deploy": {
           "builder": "angular-cli-ghpages:deploy",
           "options": {
-            "baseHref": "/DougFSilva.github.io/"
+            "baseHref": "/WPSAMCS/"
           }
         }
       }
