@@ -15,7 +15,7 @@ import { CursoService } from "src/app/services/curso.service";
 })
 export class CursoCreateComponent implements OnInit {
   curso: Curso = {
-    id: null,
+    id: "",
     modalidade: "",
     areaTecnologica: "",
     turma: [],
