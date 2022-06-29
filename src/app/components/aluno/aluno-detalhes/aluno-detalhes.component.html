@@ -58,8 +58,8 @@
 
         <mat-menu #menuStatus="matMenu">
           <button
-            *ngIf="aluno.status != 'FORMANDO'"
-            (click)="updateStatusByIdDialog('FORMANDO')"
+            *ngIf="aluno.status != 'EGRESSO'"
+            (click)="updateStatusByIdDialog('EGRESSO')"
             mat-menu-item
           >
             <mat-icon>school</mat-icon>
@@ -85,7 +85,7 @@
           *ngIf="
             aluno.desbloqueioTemporario == false &&
             aluno.status != 'EVADIDO' &&
-            aluno.status != 'FORMANDO'
+            aluno.status != 'EGRESSO'
           "
           class="button-access-unlock mat-elevation-z8"
           (click)="updateDesbloqueioDialog(true)"
@@ -97,7 +97,7 @@
           *ngIf="
             aluno.desbloqueioTemporario == true &&
             aluno.status != 'EVADIDO' &&
-            aluno.status != 'FORMANDO'
+            aluno.status != 'EGRESSO'
           "
           class="button-access-lock mat-elevation-z8"
           (click)="updateDesbloqueioDialog(false)"

@@ -6,11 +6,11 @@ import { FormControl, Validators } from "@angular/forms";
 import { Component, OnInit } from "@angular/core";
 import { Location } from "@angular/common";
 
-import { DialogComponent } from "./../../dialog/dialog.component";
+import { DialogComponent } from "src/app/components/dialog/dialog.component";
 import { Turma } from "src/app/models/Turma";
 import { AlunoFORM } from "src/app/models/AlunoFORM";
-import { AlunoService } from "./../../../services/aluno.service";
-import { TurmaService } from "./../../../services/turma.service";
+import { AlunoService } from "src/app/services/aluno.service";
+import { TurmaService } from "src/app/services/turma.service";
 
 @Component({
   selector: "app-aluno-create",
@@ -111,7 +111,7 @@ export class AlunoCreateComponent implements OnInit {
       (response) => {
         response.forEach((res) => {
           if (
-            !res.codigo.includes("FORMANDO") &&
+            !res.codigo.includes("EGRESSO") &&
             !res.codigo.includes("EVADIDO")
           ) {
             this.turmas.push(res);

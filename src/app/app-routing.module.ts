@@ -30,7 +30,7 @@ import { CursoDetalhesComponent } from './components/curso/curso-detalhes/curso-
 import { CursoCreateComponent } from './components/curso/curso-create/curso-create.component';
 import { AlunoUpdateComponent } from './components/aluno/aluno-update/aluno-update.component';
 import { AlunoCreateComponent } from "./components/aluno/aluno-create/aluno-create.component";
-import { FormandosComponent } from "./components/aluno/formandos/formandos.component";
+import { EgressosComponent } from "./components/aluno/egressos/egressos.component";
 import { AlunosComponent } from "./components/aluno/alunos/alunos.component";
 import { CursosComponent } from "./components/curso/cursos/cursos.component";
 import { AuthGuard } from "./auth/auth.guard";
@@ -152,8 +152,8 @@ const routes: Routes = [
       },
 
       {
-        path: "formandos",
-        component: FormandosComponent,
+        path: "egressos",
+        component: EgressosComponent,
       },
 
       {

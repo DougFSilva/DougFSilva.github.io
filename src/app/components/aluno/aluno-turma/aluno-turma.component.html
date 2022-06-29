@@ -14,7 +14,7 @@
 
       <div>
         <button
-          *ngIf="turma.codigo != 'FORMANDO' && turma.codigo != 'EVADIDO'"
+          *ngIf="turma.codigo != 'EGRESSO' && turma.codigo != 'EVADIDO'"
           mat-raised-button
           class="button-bloq-acesso
           "
@@ -25,7 +25,7 @@
           Bloquear acesso temporário
         </button>
         <button
-          *ngIf="turma.codigo != 'FORMANDO' && turma.codigo != 'EVADIDO'"
+          *ngIf="turma.codigo != 'EGRESSO' && turma.codigo != 'EVADIDO'"
           mat-raised-button
           class="button-lib-acesso"
           color="primary"

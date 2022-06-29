@@ -38,7 +38,7 @@ import { LoginComponent } from "./components/login/login.component";
 import { AuthInterceptorProvider } from "./interceptors/auth.interceptor";
 import { CursosComponent } from './components/curso/cursos/cursos.component';
 import { AlunosComponent } from './components/aluno/alunos/alunos.component';
-import { FormandosComponent } from './components/aluno/formandos/formandos.component';
+import { EgressosComponent } from './components/aluno/egressos/egressos.component';
 import { AlunoCreateComponent } from './components/aluno/aluno-create/aluno-create.component';
 import { AlunoUpdateComponent } from './components/aluno/aluno-update/aluno-update.component';
 import { CursoCreateComponent } from './components/curso/curso-create/curso-create.component';
@@ -82,7 +82,7 @@ import { AlarmeComponent } from './components/alarme/alarme.component';
     LoginComponent,
     CursosComponent,
     AlunosComponent,
-    FormandosComponent,
+    EgressosComponent,
     AlunoCreateComponent,
     AlunoUpdateComponent,
     CursoCreateComponent,
