@@ -1,3 +1,7 @@
+.container{
+  width: 100%;
+}
+
 .card {
     display: flex;
     flex-direction: column;
@@ -46,4 +50,10 @@
 .button-cancelar {
     width: 100%;
     margin-top: 1rem;
+}
+
+@media only screen and (max-width:768px){
+  .card{
+    width: 96%;
+  }
 }

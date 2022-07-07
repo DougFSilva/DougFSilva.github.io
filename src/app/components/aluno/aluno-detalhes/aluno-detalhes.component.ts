@@ -2,24 +2,23 @@ import { FormControl, Validators } from '@angular/forms';
 import { MatDialog } from "@angular/material/dialog";
 import { ToastrService } from "ngx-toastr";
 import { ActivatedRoute, Router } from "@angular/router";
-import { Component, OnInit } from "@angular/core";
+import { Component, HostListener, OnInit } from "@angular/core";
 import { MatTableDataSource } from "@angular/material/table";
 import { Location } from "@angular/common";
 
-import { RelatorioOcorrenciaComponent } from "./../relatorio-ocorrencia/relatorio-ocorrencia.component";
-import { RelatorioPontoComponent } from "./../relatorio-ponto/relatorio-ponto.component";
-import { DialogComponent } from "../../dialog/dialog.component";
-import { CrachaComponent } from "../cracha/cracha.component";
+import { RelatorioOcorrenciaComponent } from "src/app/components/aluno/relatorio-ocorrencia/relatorio-ocorrencia.component";
+import { RelatorioPontoComponent } from "src/app/components/aluno/relatorio-ponto/relatorio-ponto.component";
+import { DialogComponent } from "src/app/components/dialog/dialog.component";
+import { CrachaComponent } from "src/app/components/aluno/cracha/cracha.component";
 import { SolicitacaoFORM } from "src/app/models/SolicitacaoFORM";
 import { Ocorrencia } from "src/app/models/Ocorrencia";
 import { Aluno } from "src/app/models/Aluno";
 import { Turma } from "src/app/models/Turma";
 import { Curso } from "src/app/models/Curso";
 import { PontoAluno } from "src/app/models/PontoAluno";
-import { PontoAlunoService } from "./../../../services/ponto-aluno.service";
-import { CursoService } from "./../../../services/curso.service";
-import { TurmaService } from "src/app/services/turma.service";
-import { OcorrenciaService } from "./../../../services/ocorrencia.service";
+import { PontoAlunoService } from "src/app/services/ponto-aluno.service";
+import { CursoService } from "src/app/services/curso.service";
+import { OcorrenciaService } from "src/app/services/ocorrencia.service";
 import { AlunoService } from "src/app/services/aluno.service";
 import { SolicitacaoService } from "src/app/services/solicitacao.service";
 
@@ -42,6 +41,7 @@ export class PontoAlunoTable {
   styleUrls: ["./aluno-detalhes.component.css"],
 })
 export class AlunoDetalhesComponent implements OnInit {
+  innerWidth: any;
   idAluno: number;
   aluno: Aluno = {
     id: "",
@@ -129,7 +129,6 @@ export class AlunoDetalhesComponent implements OnInit {
   tag : FormControl = new FormControl(null, Validators.minLength(1))
 
   constructor(
-    private turmaService: TurmaService,
     private cursoService: CursoService,
     private service: AlunoService,
     private solicitacaoService: SolicitacaoService,
@@ -141,7 +140,13 @@ export class AlunoDetalhesComponent implements OnInit {
     private location: Location
   ) {}
 
+  @HostListener('window:resize', ['$event'])
+  onResize(event) {
+    this.innerWidth = window.innerWidth;
+}
+
   ngOnInit(): void {
+    this.innerWidth = window.innerWidth;
     this.ELEMENT_DATA_ocorrencia = this.route.snapshot.data["ocorrencia"];
     this.idAluno = parseInt(this.route.snapshot.paramMap.get("id"));
     this.findOcorrenciaById();
@@ -182,9 +187,6 @@ export class AlunoDetalhesComponent implements OnInit {
       }
     );
   }
-
-
-
 
   updateTagDialog():void{
     let dialog = this.dialog.open(DialogComponent)
@@ -304,7 +306,7 @@ export class AlunoDetalhesComponent implements OnInit {
     );
   }
 
-  OcorrenciaDeleteDialog(id: number) {
+  ocorrenciaDeleteByIdDialog(id: number) {
     let dialog = this.dialog.open(DialogComponent);
     dialog.afterClosed().subscribe((response) => {
       if (response == "true") {
@@ -364,7 +366,7 @@ export class AlunoDetalhesComponent implements OnInit {
     });
   }
 
-  applyFilter(event: Event) {
+  applyFilterOcorrencia(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSourceOcorrencia.filter = filterValue.trim().toLowerCase();
   }

@@ -39,12 +39,12 @@ export class PhotoSaveFuncionarioComponent implements OnInit {
   imageDestination: string;
   // CropperJs
 
-  mobileMedia = window.matchMedia("(max-width: 1024px)");
+  mobileMedia = window.matchMedia("(max-width: 768px)");
 
   checkMedia(mobileMedia) {
     if (mobileMedia.matches) {
-      this.webCamWidth = 600;
-      this.webCamHeight = 600;
+      this.webCamWidth = 300;
+      this.webCamHeight = 300;
     } else {
       this.webCamWidth = 600;
       this.webCamHeight = 600;

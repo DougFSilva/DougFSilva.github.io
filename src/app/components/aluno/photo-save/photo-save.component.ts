@@ -5,7 +5,6 @@ import {
   Component,
   ElementRef,
   OnInit,
-  VERSION,
   ViewChild,
 } from "@angular/core";
 import { WebcamImage, WebcamInitError } from "ngx-webcam";
@@ -13,10 +12,9 @@ import { Observable, Subject } from "rxjs";
 import Cropper from "cropperjs";
 import { Location } from "@angular/common";
 
-import { DialogComponent } from "../../dialog/dialog.component";
+import { DialogComponent } from "src/app/components/dialog/dialog.component";
 import { PhotoFORM } from "src/app/models/PhotoFORM";
 import { AlunoService } from "src/app/services/aluno.service";
-import { UploadingFilesService } from "src/app/services/uploading-files.service";
 
 
 @Component({
@@ -26,8 +24,8 @@ import { UploadingFilesService } from "src/app/services/uploading-files.service"
 })
 export class PhotoSaveComponent implements OnInit {
   // Web Cam
-  webCamWidth;
-  webCamHeight;
+  webCamWidth: any;
+  webCamHeight: any;
   allowCameraSwitch = true;
   webcamImage: WebcamImage = null;
   trigger: Subject<void> = new Subject<void>();
@@ -43,12 +41,12 @@ export class PhotoSaveComponent implements OnInit {
   // CropperJs Variables
 
   // Media resolution check
-  mobileMedia = window.matchMedia("(max-width: 1024px)");
+  mobileMedia = window.matchMedia("(max-width: 768px)");
 
   checkMedia(mobileMedia) {
     if (mobileMedia.matches) {
-      this.webCamWidth = 600;
-      this.webCamHeight = 600;
+      this.webCamWidth = 300;
+      this.webCamHeight = 300;
     } else {
       this.webCamWidth = 600;
       this.webCamHeight = 600;
@@ -65,6 +63,7 @@ export class PhotoSaveComponent implements OnInit {
     this.checkMedia(this.mobileMedia);
     this.mobileMedia.addListener(this.checkMedia);
   }
+
 
   ngOnInit(): void {
     this.idAluno = parseInt(this.route.snapshot.paramMap.get("id"));

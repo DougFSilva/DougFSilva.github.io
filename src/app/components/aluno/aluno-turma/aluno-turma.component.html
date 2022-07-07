@@ -12,7 +12,7 @@
         Cadastrar novo aluno
       </button>
 
-      <div>
+      <div class="buttons-acesso">
         <button
           *ngIf="turma.codigo != 'EGRESSO' && turma.codigo != 'EVADIDO'"
           mat-raised-button
@@ -37,7 +37,7 @@
       </div>
     </div>
 
-    <div>
+    <div class="filter">
       <mat-form-field class="form-filter" appearance="standard">
         <mat-label>Filtrar</mat-label>
         <input

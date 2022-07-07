@@ -1,7 +1,7 @@
 import { Router } from "@angular/router";
 import { MatDialog } from "@angular/material/dialog";
 import { ToastrService } from "ngx-toastr";
-import { Component, OnInit} from "@angular/core";
+import { Component, HostListener, OnInit} from "@angular/core";
 import { MatTableDataSource } from "@angular/material/table";
 
 import { DialogComponent } from "./../dialog/dialog.component";
@@ -16,6 +16,7 @@ import { AlunoService } from "src/app/services/aluno.service";
   styleUrls: ["./operacao.component.css"],
 })
 export class OperacaoComponent implements OnInit {
+  innerWidth: any;
   ELEMENT_DATA: Solicitacao[] = [];
   displayedColumns: string[] = [
     "dataSolicitacao",
@@ -37,7 +38,13 @@ export class OperacaoComponent implements OnInit {
     private router: Router
   ) {}
 
+  @HostListener('window:resize', ['$event'])
+  onResize(event) {
+    this.innerWidth = window.innerWidth;
+  }
+
   ngOnInit(): void {
+    this.innerWidth = window.innerWidth;
     this.findAll();
   }
 

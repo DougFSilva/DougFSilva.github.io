@@ -19,7 +19,7 @@
       </button>
     </div>
   </div>
-  <mat-card class="card">
+  <mat-card *ngIf="innerWidth > 768" class="card">
     <mat-form-field class="filter" appearance="standard">
       <mat-label>Filtro</mat-label>
       <input

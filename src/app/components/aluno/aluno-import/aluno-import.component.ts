@@ -1,7 +1,7 @@
 
 import { MatDialog } from "@angular/material/dialog";
 import { ToastrService } from "ngx-toastr";
-import { Component, OnInit } from "@angular/core";
+import { Component, HostListener, OnInit } from "@angular/core";
 import * as XLSX from "xlsx";
 import { MatTableDataSource } from "@angular/material/table";
 
@@ -15,6 +15,7 @@ import { AlunoService } from "src/app/services/aluno.service";
   styleUrls: ["./aluno-import.component.css"],
 })
 export class AlunoImportComponent implements OnInit {
+  innerWidth: any;
   ELEMENT_DATA: Aluno[] = [];
   displayedColumns: string[] = [
     "nome",
@@ -38,7 +39,14 @@ export class AlunoImportComponent implements OnInit {
     private dialog: MatDialog
   ) {}
 
-  ngOnInit(): void {}
+  @HostListener('window:resize', ['$event'])
+  onResize(event) {
+    this.innerWidth = window.innerWidth;
+}
+
+  ngOnInit(): void {
+    this.innerWidth = window.innerWidth;
+  }
 
   onFileChange(ev) {
     let workBook = null;

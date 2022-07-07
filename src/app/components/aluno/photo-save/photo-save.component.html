@@ -29,10 +29,6 @@
       <div class="snapshot" *ngIf="webcamImage">
         <img #image [src]="webcamImage.imageAsDataUrl" />
       </div>
-
-      <div *ngIf="webcamImage" class="img-preview">
-        <img height="auto" width="100%" [src]="imageDestination" />
-      </div>
     </div>
     <div class="save-btn-block">
       <button

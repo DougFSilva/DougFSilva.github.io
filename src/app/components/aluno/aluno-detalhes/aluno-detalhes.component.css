@@ -1,178 +1,248 @@
+.container {
+  width: 100%;
+}
+
 .card {
-    margin: 2rem;
-    background-color: rgb(235, 235, 235);
-    min-height: 100vh;
+  width: 98%;
+  margin: 2rem;
+  background-color: rgb(235, 235, 235);
+  min-height: 100vh;
 }
 
 .card-header {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .card-aluno-nome {
-    color: blueviolet;
+  color: blueviolet;
 }
 
 .card-aluno-turma {
-    color: red
+  color: red
 }
 
 .card-aluno-idade {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .card-aluno-empresa {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .button-access-unlock {
-    margin-top: 1em;
-    background-color: forestgreen;
-    color: white;
-    float: right;
-    width: auto;
+  margin-top: 1em;
+  background-color: forestgreen;
+  color: white;
+  float: right;
+  width: auto;
 }
 
 .button-access-lock {
-    margin-top: 1em;
-    background-color: red;
-    color: white;
-    float: right;
-    width: auto;
+  margin-top: 1em;
+  background-color: red;
+  color: white;
+  float: right;
+  width: auto;
 }
 
 .button-more {
-    margin-top: 1em;
-    background-color: blueviolet;
-    color: white;
-    float: right;
-    margin-left: 1em;
-    width: 8rem;
+  margin: 1rem 0 1rem 1rem;
+  background-color: blueviolet;
+  color: white;
+  float: right;
+  width: 8rem;
 }
 
 .aluno-foto {
-    height: 10rem;
-    width: 8rem;
+  height: 10rem;
+  width: 8rem;
 }
 
+.tab{
+  width: 100%;
+}
 
 .mat-tab-icon {
-    color: red;
+  color: red;
 }
 
 .card-detalhes {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin: 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .card-ponto {
-    margin: auto;
-    width: 100%;
+  margin: auto;
+  width: 100%;
 }
 
 .table-ponto {
-    width: 60%;
-    margin: auto;
+  width: 60%;
+  margin: auto;
+}
+
+.list-detalhes{
+  width: 100%;
+}
+
+.ponto-filtro{
+  width: 20rem;
+  margin-left: 1rem;
 }
 
 .list-item-title {
-    color: red;
-    margin-right: 1rem;
-    margin: auto 0 auto 0;
-    display: inline;
+  color: red;
+  margin-right: 1rem;
+  margin: auto 0 auto 0;
+  display: inline;
 }
 
 .list-item-descricao {
-    color: blue;
-    margin: auto 1rem auto 1rem;
-    display: inline;
+  color: blue;
+  margin: auto 1rem auto 0;
 }
 
-.button-editar-tag{
-  width: 15rem;
+.button-editar-tag {
+  width: auto;
+  margin-left: 1rem;
 }
 
-.table-ocorrencia{
-    width: 100%;
-    max-width: 100%;
+.tag-input{
+  width: 8rem;
 }
 
-.ocorrencia-button-nova{
+.table-ocorrencia {
+  width: 100%;
 
-    float: right;
 }
 
-.mat-form-field {
-    font-size: 14px;
-    width: 100%;
+.ocorrencia-button-nova {
+  float: right;
+}
+
+.ocorrencia-filtro{
+  width: 20rem;
+  margin-left: 1rem;
 }
 
 .mat-column-data {
-    min-width: 10%;
-    max-width: 10%;
+  min-width: 10%;
+  max-width: 10%;
 }
 
 .mat-column-tipo {
-    min-width: 15%;
-    max-width: 15%;
+  min-width: 15%;
+  max-width: 15%;
 }
 
 .mat-column-registrado_por {
-    min-width: 14%;
-    max-width: 14%;
+  min-width: 14%;
+  max-width: 14%;
 }
 
 .mat-column-descri--o,
 .mat-cell,
 .cdk-column-descri--o {
-    min-width: 40%;
-    max-width: 40%;
+  min-width: 40%;
+  max-width: 40%;
 }
 
 .mat-column-bloqueio {
-    min-width: 7%;
-    max-width: 7%;
+  min-width: 7%;
+  max-width: 7%;
 
 }
 
-.mat-column-data {
-    width: 20%;
+.card-ocorrencia{
+  background-color: rgb(235, 235, 235);
+  padding: .5rem;
 }
 
-.mat-column-semestre {
-    width: 25%;
+.card-ocorrencia-menu{
+  float: right;
 }
 
-.mat-column-recibo {
-    width: 25%;
+.card-ocorrencia-icon-edit{
+  transform: scale(0.9);
+  color:red;
+  cursor: pointer;
 }
 
-.mat-column-valor {
-    width: 25%;
+.card-ocorrencia-icon-delete{
+  transform: scale(0.9);
+  color: blueviolet;
+  cursor: pointer;
 }
 
-.mat-column-acao {
-    width: 5%;
+.card-ocorrencia-item{
+  display: block;
+}
+
+.card-ocorrencia-key{
+  color: red;
+  font-weight: 500;
+  display: inline;
+}
+
+.card-ocorrencia-value{
+  margin-left: 1rem;
+  display: inline;
+  line-height: 1rem;
 }
 
 .table-icon-edit {
-    max-width: 2em;
-    min-width: 2em;
-    transform: scale(0.8);
-    color: blueviolet;
-    cursor: pointer;
-    display: inline;
+  max-width: 2em;
+  min-width: 2em;
+  transform: scale(0.8);
+  color: blueviolet;
+  cursor: pointer;
+  display: inline;
 
 }
 
 .table-icon-delete {
-    max-width: 2em;
-    min-width: 2em;
-    transform: scale(0.8);
-    color: red;
-    cursor: pointer;
-    display: inline;
-    margin-left: .4em;
+  max-width: 2em;
+  min-width: 2em;
+  transform: scale(0.8);
+  color: red;
+  cursor: pointer;
+  display: inline;
+  margin-left: .4em;
+}
+
+@media only screen and (max-width:768px) {
+
+  .card {
+    width: 98%;
+    margin: auto;
+  }
+
+  .button-access-unlock, .button-access-lock{
+    width: 100%;
+    display: block;
+    float: none;
+    margin-bottom: 1rem;
+  }
+
+  .card-detalhes {
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .list-item-title, .list-item-descricao  {
+    font-size: .8rem;
+  }
+
+  .table-ponto {
+    width: 90%;
+  }
+
+  .ocorrencia-filtro, .ponto-filtro{
+    width: 100%;
+    margin: auto;
+  }
+
 }

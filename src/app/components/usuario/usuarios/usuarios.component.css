@@ -1,3 +1,7 @@
+.container{
+  width: 100%;
+}
+
 h1 {
     color: blueviolet;
     font-weight: bold;
@@ -6,6 +10,7 @@ h1 {
 }
 
 .card {
+    width: 96%;
     margin: 1rem;
 }
 
@@ -42,13 +47,52 @@ h1 {
     width: 5%;
 }
 
+.card-usuario{
+  width: 96%;
+  margin: 0 auto .5rem auto;
+  padding: .5rem;
+  background-color: rgb(235, 235, 235);
+}
+
+.card-usuario-menu{
+  float: right;
+}
+
+.card-usuario-icon-edit{
+  transform: scale(0.7);
+  color: blueviolet;
+  display: inline;
+  cursor: pointer;
+}
+
+.card-usuario-icon-delete{
+  transform: scale(0.7);
+  color: red;
+  display: inline;
+  cursor: pointer;
+}
+
+.card-usuario-item{
+  width: 100%;
+  display: block;
+}
+
+.card-usuario-item-key{
+  display: inline;
+  color:red;
+  font-weight: 500;
+}
+
+.card-usuario-item-value{
+  display: inline;
+  margin-left: .5rem;
+}
 
 .icon-edit {
     transform: scale(0.7);
     color: blueviolet;
     display: inline;
     cursor: pointer;
-
 }
 
 .icon-delete {
@@ -57,4 +101,19 @@ h1 {
     display: inline;
     cursor: pointer;
     margin-left: .4em;
+}
+
+@media only screen and (max-width:768px) {
+
+h1 {
+  font-size: 1.2rem;
+}
+
+.button-add {
+  width: 90%;
+  display: block;
+  margin: auto;
+}
+
+
 }

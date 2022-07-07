@@ -1,13 +1,7 @@
 <div class="container">
   <h1>SISTEMA DE GERENCIAMENTO E CONTROLE DE ACESSO ESCOLAR</h1>
   <div>
-    <mat-grid-list cols="9" rowHeight="200px" gutterSize="10px">
-      <mat-grid-tile
-        [colspan]="3"
-        [rowspan]="1"
-        [style]="{ 'background-color': 'none' }"
-      >
-      </mat-grid-tile>
+    <mat-grid-list cols="6" rowHeight="150px" gutterSize="10px" class="grid">
 
       <mat-grid-tile
         [colspan]="3"
@@ -15,7 +9,7 @@
         [style]="{ 'background-color': 'lightSkyBlue' }"
       >
         <div class="grid-tile">
-          <h2>Total de alunos</h2>
+          <h2 class="grid-tile-key">Total de alunos</h2>
           <h1 class="grid-tile-value">{{ totalAlunos }}</h1>
         </div>
       </mat-grid-tile>
@@ -26,7 +20,7 @@
         [style]="{ 'background-color': 'lightGreen' }"
       >
         <div class="grid-tile">
-          <h2>Alunos dentro da escola</h2>
+          <h2 class="grid-tile-key">Dentro da escola</h2>
           <h1 class="grid-tile-value">{{ alunosDentroDaEscola }}</h1>
         </div>
       </mat-grid-tile>

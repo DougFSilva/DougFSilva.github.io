@@ -9,7 +9,6 @@
     flex-direction: column;
     margin-left: 3em;
     align-items: flex-start;
-
 }
 
 h1 {
@@ -22,6 +21,10 @@ h1 {
 .button-add {
     width: 15rem;
     height: 2rem;
+}
+
+.filter{
+  width: 100%;
 }
 
 .form-filter {
@@ -118,4 +121,31 @@ mat-card-content {
     color: blue;
     font-size: 0.8rem;
     cursor: pointer;
+}
+
+@media only screen and (max-width:768px){
+
+  h1{
+    font-size: 1.2rem;
+  }
+
+  .container-header {
+    margin:auto;
+}
+  .cards {
+    margin:auto;
+  }
+
+  .card {
+    height: 19rem;
+    width: 45%;
+    height: 17rem;
+  }
+
+  .button-add, .form-filter, .form-filter-options, .result {
+    display: block;
+    width: 90%;
+    margin: auto;
+}
+
 }

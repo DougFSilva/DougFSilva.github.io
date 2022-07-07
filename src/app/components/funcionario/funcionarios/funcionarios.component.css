@@ -24,6 +24,10 @@ h1 {
     height: 2rem;
 }
 
+.filter{
+  width: 100%;
+}
+
 .form-filter {
     width: 15rem;
     margin-right: 1rem;
@@ -54,7 +58,6 @@ h1 {
     margin: .5rem .5rem;
     background-color: rgb(235, 235, 235);
 
-
 }
 
 .card:hover {
@@ -67,12 +70,8 @@ h1 {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    margin-right: -1rem;
-}
+    width: 100%;
 
-.card-header-div-icon-person {
-    width: 15%;
-    margin-left: -3rem;
 }
 
 .card-header-div-title {
@@ -82,9 +81,7 @@ h1 {
 
 .card-header-div-icon-menu {
     width: 15%;
-    margin-right: .5rem;
 }
-
 
 .card-empresa {
     color: blueviolet;
@@ -93,7 +90,6 @@ h1 {
 
 .card-menu {
     margin-top: -1em;
-
 }
 
 .card-img {
@@ -112,4 +108,34 @@ mat-card-content {
     color: blue;
     font-size: 0.8rem;
     cursor: pointer;
+}
+
+@media only screen and (max-width:768px) {
+
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  .container-header {
+    margin: auto;
+  }
+
+  .button-add,
+  .form-filter,
+  .form-filter-options,
+  .result {
+    display: block;
+    width: 90%;
+    margin: auto;
+  }
+
+  .cards {
+    margin: auto;
+  }
+
+  .card {
+    height: 19rem;
+    width: 45%;
+    height: 17rem;
+  }
 }

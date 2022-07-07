@@ -1,8 +1,12 @@
+.container{
+  width: 100%;
+}
+
 .card {
   display: flex;
   flex-direction: column;
   background-color: rgb(235, 235, 235);
-  width: 35vw;
+  width: 35rem;
   height: auto;
   margin: 2rem auto 2rem auto;
   align-items: center;
@@ -45,4 +49,15 @@ h1 {
 .button-cadastrar {
   margin-top: 1em;
   width: 100%;
+}
+
+@media only screen and (max-width:768px){
+
+  .card {
+    width: 96%;
+  }
+
+  h1 {
+    font-size: 1.2rem;
+  }
 }

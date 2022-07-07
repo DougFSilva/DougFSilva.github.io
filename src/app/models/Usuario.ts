@@ -3,5 +3,5 @@ export interface Usuario {
     nome: string,
     empresa: string,
     username: string,
-    perfis: object[]
+    perfis: any
 }

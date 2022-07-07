@@ -172,3 +172,32 @@
   display: inline;
   margin-left: .4em;
 }
+
+
+@media only screen and (max-width:768px) {
+
+  .card {
+    width: 98%;
+    margin: auto;
+  }
+
+  .card-detalhes {
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .list-item-title, .list-item-descricao  {
+    font-size: .8rem;
+  }
+
+  .table-ponto {
+    width: 90%;
+  }
+
+  .ponto-filtro{
+    width: 100%;
+    margin: auto;
+  }
+
+}

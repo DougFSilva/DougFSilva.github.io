@@ -1,7 +1,6 @@
 import { MatDialog } from "@angular/material/dialog";
 import { ToastrService } from "ngx-toastr";
-import { Component, OnInit } from "@angular/core";
-import { Location } from "@angular/common";
+import { Component, HostListener, OnInit } from "@angular/core";
 import { MatTableDataSource } from "@angular/material/table";
 
 import { DialogComponent } from "src/app/components/dialog/dialog.component";
@@ -21,6 +20,7 @@ export interface PeriodicElement {
   styleUrls: ["./usuarios.component.css"],
 })
 export class UsuariosComponent implements OnInit {
+  innerWidth: any;
   usuarios: Usuario[] = [];
   usuario: Usuario = {
     id: null,
@@ -50,7 +50,14 @@ export class UsuariosComponent implements OnInit {
     private dialog: MatDialog
   ) {}
 
+  @HostListener('window:resize', ['$event'])
+  onResize(event) {
+    this.innerWidth = window.innerWidth;
+  }
+
+
   ngOnInit(): void {
+    this.innerWidth = window.innerWidth;
     this.findAll();
   }
 

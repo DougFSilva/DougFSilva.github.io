@@ -13,7 +13,7 @@
 .card {
   background-color: rgb(235, 235, 235);
   margin: 0 auto;
-  width: 62vw;
+  width: 80%;
   height: auto;
 }
 
@@ -62,7 +62,6 @@
 .button-delete {
   margin-top: 3em;
   width: 100%;
-  float: right
 }
 
 .button-save {
@@ -93,5 +92,22 @@
   background-color: blueviolet;
   font-weight: bold;
   border-radius: .5rem;
+}
+
+@media only screen and (max-width:768px){
+
+  .title{
+    font-size: 1.2rem;
+  }
+
+  .card-div {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .field, .card, .card-div-more-options {
+    width: 100%;
+    margin: auto;
+  }
 
 }

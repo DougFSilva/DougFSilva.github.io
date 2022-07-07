@@ -1,5 +1,5 @@
 .container {
-  margin: 1rem;
+  width: 100%;
 }
 
 h1 {
@@ -11,14 +11,17 @@ h1 {
 
 .button-opcoes {
   float: right;
+  margin-right: 2%;
 }
 
 .filter {
-  width: 100%;
+  width: 96%;
+  margin-left: 2%;
 }
 
 .table {
-  width: 100%;
+  width: 96%;
+  margin: auto;
 }
 
 .mat-column-data {
@@ -65,4 +68,55 @@ h1 {
 .icon-delete {
   transform: scale(0.7);
   color: red;
+}
+
+.cards-alarme{
+  width: 100%;
+}
+
+.card-alarme{
+  width: 96%;
+  margin: 0 auto .5rem auto;
+  background-color: rgb(235, 235, 235);
+}
+
+.card-alarme-menu{
+  float: right;
+}
+
+.card-alarme-icon-edit{
+  transform: scale(0.7);
+  color: blueviolet;
+  display: inline;
+  cursor: pointer;
+}
+
+.card-alarme-icon-delete{
+  transform: scale(0.7);
+  color: red;
+  display: inline;
+  cursor: pointer;
+}
+
+.card-alarme-item{
+  display: block;
+}
+
+.card-alarme-item-key{
+  display: inline;
+  color: red;
+  font-weight: 500;
+}
+
+.card-alarme-item-value{
+  display: inline;
+  margin-left: .5rem;
+}
+
+
+@media only screen and (max-width:768px){
+  h1 {
+    font-size: 1.2rem;
+  }
+
 }

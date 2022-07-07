@@ -34,7 +34,6 @@ h1 {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: flex-start;
-
 }
 
 .card {
@@ -94,3 +93,30 @@ img {
     height: 65%;
     margin: auto;
 }
+
+@media only screen and (max-width:768px) {
+
+  h1{
+    font-size: 1.2rem;
+  }
+
+  .container-header {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .button-add, .form-filter {
+    width: 90%;
+    margin:auto;
+  }
+
+  .cards {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .card {
+   margin: 1rem auto 1rem auto;
+  }
+}
+

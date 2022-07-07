@@ -1,5 +1,5 @@
 .container {
-  margin: 1rem;
+  width: 100%;
 }
 
 h1 {
@@ -11,14 +11,17 @@ h1 {
 
 .button-opcoes {
   float: right;
+  margin-right: 2%;
 }
 
 .table-solicitacao-pendente {
-  width: 100%;
+  margin: auto;
+  width: 96%;
 }
 
-.filtro {
-  width: 100%;
+.filtro{
+  margin-left: 2%;
+  width: 96%;
 }
 
 .mat-column-dataSolicitacao {
@@ -70,4 +73,53 @@ h1 {
   transform: scale(0.8);
   color: red;
   margin-left: -2rem;
+}
+
+.cards-solicitacao{
+  width: 100%;
+}
+
+.card-solicitacao{
+  width: 96%;
+  margin: 0 auto .5rem auto;
+  background-color: rgb(235, 235, 235);
+}
+
+.card-operacao-menu{
+  float: right;
+}
+
+.card-operacao-icon-edit{
+  transform: scale(0.7);
+  color: blueviolet;
+  display: inline;
+  cursor: pointer;
+}
+
+.card-operacao-icon-delete{
+  transform: scale(0.7);
+  color: red;
+  display: inline;
+  cursor: pointer;
+}
+
+.card-solicitacao-item{
+  display: block;
+}
+
+.card-solicitacao-item-key{
+  display: inline;
+  color: red;
+  font-weight: 500;
+}
+
+.card-solicitacao-item-value{
+  display: inline;
+  margin-left: .5rem;
+}
+
+@media only screen and (max-width:768px){
+  h1 {
+   font-size: 1.2rem;
+  }
 }

@@ -1,6 +1,6 @@
 
 import { MatDialog } from "@angular/material/dialog";
-import { Component, OnInit } from "@angular/core";
+import { Component, HostListener, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
 import { ToastrService } from "ngx-toastr";
 import { Subject } from "rxjs";
@@ -16,6 +16,9 @@ import { AuthService } from "src/app/services/auth.service";
   styleUrls: ["./nav.component.css"],
 })
 export class NavComponent implements OnInit {
+  innerWidth: any;
+  sideNavMode: any;
+  sideNavOpen: boolean;
   usuarioLogado: string;
   perfilUsuario: string;
   panelOpenState = false;
@@ -30,7 +33,13 @@ export class NavComponent implements OnInit {
     private alunoService: AlunoService
   ) {}
 
+  @HostListener('window:resize', ['$event'])
+  onResize(event) {
+    this.setSideNavMode();
+}
+
   ngOnInit(): void {
+    this.setSideNavMode();
     this.router.navigate(["home"]);
     this.getUsuarioLogado();
     this.getPerfilUsuario();
@@ -100,4 +109,16 @@ export class NavComponent implements OnInit {
     }
     return;
   }
+
+  setSideNavMode(): void{
+    this.innerWidth = window.innerWidth;
+    if(this.innerWidth > 768){
+      this.sideNavMode = 'side';
+      this.sideNavOpen = true;
+    }else{
+      this.sideNavMode = 'over';
+      this.sideNavOpen = false;
+    }
+  }
+
 }

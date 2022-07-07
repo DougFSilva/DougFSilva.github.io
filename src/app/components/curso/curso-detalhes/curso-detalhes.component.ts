@@ -3,8 +3,8 @@ import { ActivatedRoute, Router } from "@angular/router";
 import { Component, OnInit } from "@angular/core";
 import { ToastrService } from "ngx-toastr";
 
-import { DialogComponent } from "../../dialog/dialog.component";
-import { UploadFilesComponent } from "../../upload-files/upload-files.component";
+import { DialogComponent } from "src/app/components/dialog/dialog.component";
+import { UploadFilesComponent } from "src/app/components/upload-files/upload-files.component";
 import { Turma } from "src/app/models/Turma";
 import { Curso } from "src/app/models/Curso";
 import { Aluno } from "src/app/models/Aluno";
@@ -34,7 +34,6 @@ export class CursoDetalhesComponent implements OnInit {
     private alunoService: AlunoService,
     private turmaService: TurmaService,
     private service: CursoService,
-    private router: Router,
     private route: ActivatedRoute,
     private toast: ToastrService,
     private dialog: MatDialog
@@ -106,7 +105,7 @@ export class CursoDetalhesComponent implements OnInit {
   move(idTurmaAtual: number, idTurmaDestino: number): void {
     this.alunoService.move(idTurmaAtual, idTurmaDestino).subscribe(
       () => {
-        this.toast.success("Aluno movidos com sucesso!", "Move");
+        this.toast.success("Alunos movidos com sucesso!", "Update");
       },
       (ex) => {
         this.toast.error(ex.error.error, "Error");

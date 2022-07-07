@@ -1,7 +1,7 @@
 import { Router } from "@angular/router";
 import { MatDialog } from "@angular/material/dialog";
 import { ToastrService } from "ngx-toastr";
-import { Component, OnInit } from "@angular/core";
+import { Component, HostListener, OnInit } from "@angular/core";
 import { MatTableDataSource } from "@angular/material/table";
 
 import { Alarm } from "src/app/models/Alarm";
@@ -14,6 +14,7 @@ import { AlarmeService } from "./../../services/alarme.service";
   styleUrls: ["./alarme.component.css"],
 })
 export class AlarmeComponent implements OnInit {
+  innerWidth: any;
   ELEMENT_DATA: Alarm[] = [];
   displayedColumns: string[] = [
     "data",
@@ -32,7 +33,13 @@ export class AlarmeComponent implements OnInit {
     private router: Router
   ) {}
 
+  @HostListener('window:resize', ['$event'])
+  onResize(event) {
+    this.innerWidth = window.innerWidth;
+}
+
   ngOnInit(): void {
+    this.innerWidth = window.innerWidth;
     this.findAll();
   }
 

@@ -63,7 +63,6 @@ h1 {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    margin-right: -1rem;
 }
 
 .card-header-div-title {
@@ -99,3 +98,33 @@ mat-card-content {
     font-size: 0.8rem;
     cursor: pointer;
 }
+
+@media only screen and (max-width:768px) {
+
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  .container-header {
+    margin: auto;
+  }
+
+  .button-add,
+  .form-filter,
+  .result, .form-filter-curso {
+    display: block;
+    width: 90%;
+    margin: auto;
+  }
+
+  .cards {
+    margin: auto;
+  }
+
+  .card {
+    height: 19rem;
+    width: 45%;
+    height: 17rem;
+  }
+}
+
