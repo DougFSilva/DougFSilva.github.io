@@ -37,8 +37,6 @@ h1 {
 }
 
 .card {
-  max-width: 15rem;
-  max-height: 19rem;
   width: 15rem;
   height: 19rem;
   margin: .5rem .5rem;
@@ -117,5 +115,6 @@ img {
 
   .card {
    margin: 1rem auto 1rem auto;
+   width: 90%;
   }
 }

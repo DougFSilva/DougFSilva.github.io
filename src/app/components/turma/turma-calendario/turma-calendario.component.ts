@@ -5,7 +5,7 @@ import { Component, OnInit } from "@angular/core";
 import { Location } from "@angular/common";
 import { MatDatepickerInputEvent } from "@angular/material/datepicker";
 
-import { DialogComponent } from "../../dialog/dialog.component";
+import { DialogComponent } from "src/app/components/dialog/dialog.component";
 import { Turma } from "src/app/models/Turma";
 import { AulaFORM } from "src/app/models/AulaFORM";
 import { Aula } from "src/app/models/Aula";
@@ -123,7 +123,7 @@ export class TurmaCalendarioComponent implements OnInit {
         (res) => {
           if (
             !res.codigo.includes("EGRESSO") &&
-            !res.codigo.includes("DESISTENTE")
+            !res.codigo.includes("EVADIDO")
           ) {
             this.turmas.push(res);
           }
