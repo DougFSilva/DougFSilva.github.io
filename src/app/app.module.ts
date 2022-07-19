@@ -72,6 +72,7 @@ import { RelatorioPontoFuncionarioComponent } from './components/funcionario/rel
 import { CrachaFuncionarioComponent } from './components/funcionario/cracha-funcionario/cracha-funcionario.component';
 import { OperacaoComponent} from './components/operacao/operacao.component'
 import { AlarmeComponent } from './components/alarme/alarme.component';
+import { AcessoComponent } from './components/acesso/acesso.component';
 
 @NgModule({
   declarations: [
@@ -116,6 +117,7 @@ import { AlarmeComponent } from './components/alarme/alarme.component';
     CrachaFuncionarioComponent,
     OperacaoComponent,
     AlarmeComponent,
+    AcessoComponent,
 
 ],
   imports: [

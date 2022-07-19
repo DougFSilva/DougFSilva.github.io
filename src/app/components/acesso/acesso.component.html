@@ -1,0 +1,58 @@
+<div class="container">
+  <div class="card mat-elevation-z4">
+    <div class="card-send-tag">
+      <mat-form-field class="card-input-tag" appearance="legacy">
+        <mat-label>Digite a tag</mat-label>
+        <input
+          [(ngModel)]="tag"
+          matInput
+          placeholder="Ex. 12345678"
+          value="tag"
+        />
+      </mat-form-field>
+      <button
+        class="card-button-send mat-elevation-z4"
+        mat-raised-button
+        color="primary"
+        (click)="findByTag()"
+      >
+        Passar crachá
+      </button>
+    </div>
+    <div class="card-response">
+      <div class="card-response-data">
+        <div class="card-response-item">
+          <h3 class="card-response-item-key">Nome:</h3>
+          <h3 class="card-response-item-value">{{ acesso.usuario }}</h3>
+        </div>
+        <div class="card-response-item">
+          <h3 class="card-response-item-key">Tipo de usuário:</h3>
+          <h3 class="card-response-item-value">{{ acesso.tipoUsuario }}</h3>
+        </div>
+        <div class="card-response-item">
+          <h3 class="card-response-item-key">Timestamp:</h3>
+          <h3 class="card-response-item-value">{{ acesso.timestamp }}</h3>
+        </div>
+        <div class="card-response-item">
+          <h3 class="card-response-item-key">Mensagem:</h3>
+          <h3 class="card-response-item-value">{{ acesso.mensagem }}</h3>
+        </div>
+
+        <div class="card-response-item">
+          <h3 class="card-response-item-key">Ação:</h3>
+          <h3 class="card-response-item-value">{{ acesso.entradaSaida }}</h3>
+        </div>
+      </div>
+      <div class="card-response-access-status">
+        <div *ngIf="acesso.usuario" class="access-status-icon">
+          <div *ngIf="acesso.acessoLiberado; else elseBlock">
+            <mat-icon class="icon-check">check</mat-icon>
+          </div>
+          <ng-template #elseBlock>
+            <mat-icon class="icon-block">block</mat-icon>
+          </ng-template>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

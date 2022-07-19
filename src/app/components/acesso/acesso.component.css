@@ -1,0 +1,103 @@
+.container{
+  width: 100%;
+}
+
+.card{
+  width: 60%;
+  margin: 2rem auto 0 auto;
+  border-radius: 1rem;
+  background-color: rgb(235,235,235);;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 1rem;
+
+}
+
+.card-send-tag{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  margin: auto;
+}
+
+.card-input-tag{
+  width: 100%;
+  margin: auto;
+}
+
+.card-button-send{
+  width: 100%;
+  margin: auto;
+}
+
+.card-response{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin: 1rem auto 0 auto;
+}
+
+.card-response-data{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 70%;
+}
+
+.card-response-access-status{
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-check{
+  color: green;
+  transform: scale(3);
+  margin: auto;
+}
+
+.icon-block{
+  color: red;
+  transform: scale(3);
+  margin: auto;
+}
+
+.card-response-item{
+  width: 100%;
+}
+
+.card-response-item-key{
+  color: blueviolet;
+  font-weight: 500;
+  display: inline;
+}
+
+.card-response-item-value{
+  margin-left: .5rem;
+  display: inline;
+}
+
+@media only screen and (max-width:768px){
+
+  .card{
+    width: 90%;
+  }
+
+  .card-response{
+    flex-direction: column;
+  }
+
+  .card-response-data{
+    width: 100%;
+}
+
+  .card-response-access-status{
+    width: 100%;
+    margin: 2rem auto 1rem auto;
+  }
+}

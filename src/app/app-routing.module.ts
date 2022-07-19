@@ -1,3 +1,4 @@
+import { AcessoComponent } from './components/acesso/acesso.component';
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 
@@ -54,6 +55,10 @@ const routes: Routes = [
       {
         path: "home",
         component: HomeComponent,
+      },
+      {
+        path: "acesso",
+        component: AcessoComponent,
       },
 
       {
