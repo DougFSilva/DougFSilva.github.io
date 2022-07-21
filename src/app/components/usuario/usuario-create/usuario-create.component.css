@@ -1,19 +1,23 @@
 .container{
   width: 100%;
+  min-height: 100vh;
+  padding-top: 1rem;
+  background-color: #1C1C1C;;
 }
 
 .card {
   display: flex;
   flex-direction: column;
   background-color: rgb(235, 235, 235);
+  border-radius: 1rem;
   width: 35rem;
   height: auto;
-  margin: 2rem auto 2rem auto;
+  margin: auto;
   align-items: center;
 }
 
 h1 {
-  color: blueviolet;
+  color: royalblue;
   font-weight: bold;
   text-align: center;
   margin-top: 1rem;
@@ -21,7 +25,7 @@ h1 {
 
 .icon {
   transform: scale(2);
-  color: blueviolet;
+  color: royalblue;
   margin: 1em auto 1em auto;
 }
 

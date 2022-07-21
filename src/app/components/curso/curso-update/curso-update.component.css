@@ -1,3 +1,10 @@
+.container{
+  width: 100%;
+  min-height: 100vh;
+  background-color: #1C1C1C;
+  padding-top: 1rem;
+}
+
 .card {
   background-color: rgb(235, 235, 235);
   width: 30rem;
@@ -16,11 +23,11 @@
   font-weight: bold;
   width: 100%;
   text-align: center;
-  color: blueviolet
+  color: royalblue
 }
 
 .icon-curso {
-  color: blueviolet;
+  color: royalblue;
   transform: scale(2, 2);
   margin-bottom: 1rem;
   margin-left: .5rem;

@@ -1,21 +1,23 @@
 .container {
   width: 100%;
-  margin: auto;
+  min-height: 100vh;
+  background-color: #1C1C1C;
 }
 
 .container-header {
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
-  margin-left: 3em;
   align-items: flex-start;
+  width: 94%;
+  margin: auto;
 }
 
 h1 {
-  color: blueviolet;
+  color: royalblue;
   font-weight: bold;
   text-align: center;
-  margin-top: 1rem;
+  padding-top: 1rem;
 }
 
 .buttons {
@@ -33,14 +35,16 @@ h1 {
 .form-filter {
   width: 15rem;
   margin-right: 1rem;
+  color: royalblue;
 }
 
 .form-filter-options {
   width: 8rem;
+  color: royalblue;
 }
 
 .result {
-  color: blueviolet;
+  color: royalblue;
 }
 
 .button-lib-acesso {
@@ -57,12 +61,12 @@ h1 {
 }
 
 .cards {
-  width: 100%;
+  width: 94%;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: flex-start;
-  margin-left: 2rem;
+  margin: auto;
 }
 
 .card {
@@ -112,13 +116,13 @@ h1 {
 
 
 .card-turma {
-  color: blueviolet;
+  color: royalblue;
   font-weight: bold;
 }
 
 .card-menu {
   margin-top: -1em;
-
+  color: royalblue;
 }
 
 .card-img {
@@ -168,10 +172,12 @@ h1 {
     display: block;
     margin: .5rem auto;
     width: 90%;
+
   }
 
   .filter{
     width: 100%;
+    color: royalblue;
   }
 
   .cards {

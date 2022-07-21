@@ -1,18 +1,21 @@
 .container {
     width: 100%;
-    margin: auto;
+    min-height: 100vh;
+    background-color: #1C1C1C;
+    padding-top: 1rem;
 }
 
 .container-header {
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
-    margin-left: 3em;
     align-items: flex-start;
+    width: 94%;
+    margin: auto;
 }
 
 h1 {
-    color: blueviolet;
+    color: royalblue;
     font-weight: bold;
     text-align: center;
     margin-top: 1rem;
@@ -37,7 +40,7 @@ h1 {
 }
 
 .result {
-    color: blueviolet;
+    color: royalblue;
 }
 
 .cards {
@@ -96,7 +99,7 @@ h1 {
 
 
 .card-turma {
-    color: blueviolet;
+    color: royalblue;
     font-weight: bold;
 }
 

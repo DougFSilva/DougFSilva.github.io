@@ -2,7 +2,7 @@ import { API_CONFIG } from 'src/app/config/api.config';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Acesso } from '../models/Acesso';
+import { Acesso } from 'src/app/models/Acesso';
 
 @Injectable({
   providedIn: 'root'

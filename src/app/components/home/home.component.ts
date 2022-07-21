@@ -1,8 +1,9 @@
+import { AlunoDetalhesComponent } from './../aluno/aluno-detalhes/aluno-detalhes.component';
 import { MatTableDataSource } from '@angular/material/table';
 import { ToastrService } from 'ngx-toastr';
 import { BaseChartDirective } from 'ng2-charts';
 import { Component, OnInit, QueryList, ViewChildren } from '@angular/core';
-import { ChartConfiguration, ChartData, ChartEvent, ChartType } from 'chart.js';
+import { ChartConfiguration, ChartData, ChartEvent, ChartOptions, ChartType } from 'chart.js';
 import DataLabelsPlugin from 'chartjs-plugin-datalabels';
 
 import { Aluno } from 'src/app/models/Aluno';
@@ -29,10 +30,23 @@ export class HomeComponent implements OnInit {
   public cidadeChartData: ChartData<'doughnut'> = {
     labels: this.cidadeChartLabels,
     datasets: [{ data: [] }],
+
   };
-  public cidadeChartType: ChartType = 'doughnut';
+
+  public chartDataOptions: ChartConfiguration['options'] = {
+    responsive: true,
+    // We use these empty structures as placeholders for dynamic theming.
+    plugins: {
+      legend:{
+        labels:{color:'white'}
+      },
+
+    },
+
+  };
 
   //------------Alunos por sexo-------------//
+  public cidadeChartType: ChartType = 'doughnut';
   public sexoChartLabels: string[] = ['Feminino', 'Masculino'];
   public sexoChartData: ChartData<'doughnut'> = {
     labels: this.sexoChartLabels,
@@ -56,16 +70,24 @@ export class HomeComponent implements OnInit {
       y: {
         min: 1,
       },
+
     },
 
     plugins: {
       legend: {
         display: false,
+        labels:{
+          color: 'white'
+        },
+
       },
       datalabels: {
         anchor: 'end',
         align: 'end',
+        color:'white'
       },
+
+
     },
   };
   public empresaBarChartType: ChartType = 'bar';
@@ -93,6 +115,7 @@ export class HomeComponent implements OnInit {
       datalabels: {
         anchor: 'end',
         align: 'end',
+        color:'white'
       },
     },
   };
@@ -297,4 +320,5 @@ export class HomeComponent implements OnInit {
       child.chart.update();
     });
   }
+
 }

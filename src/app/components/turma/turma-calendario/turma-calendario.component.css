@@ -1,18 +1,19 @@
 .container {
+  background-color: #1C1C1C;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 1rem
+  padding: 1rem;
 }
 
 .title {
   font-weight: bold;
-  color: blueviolet
+  color: royalblue
 }
 
 .card {
   background-color: rgb(235, 235, 235);
-  margin: 0 auto;
+  margin: auto;
   width: 80%;
   height: auto;
 }
@@ -83,7 +84,7 @@
 
 .card-dates h2 {
   font-weight: bold;
-  color: blueviolet;
+  color: royalblue;
   text-align: center;
 }
 

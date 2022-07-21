@@ -1,102 +1,105 @@
 .container {
-    width: 100%;
-    margin: auto;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #1C1C1C;
+  padding-top: 1rem;
 }
 
 .container-header {
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    margin-left: 3em;
-    align-items: flex-start;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 94%;
+  margin-left: auto;
+  align-items: flex-start;
 
 }
 
 h1 {
-    color: blueviolet;
-    font-weight: bold;
-    text-align: center;
-    margin-top: 1rem;
+  color: royalblue;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 1rem;
 }
 
 .form-filter {
-    width: 15rem;
-    margin-left: 2rem;
+  width: 15rem;
+  margin-left: 2rem;
 }
 
 .form-filter-curso {
-    width: 17rem;
-    margin-left: 2rem;
+  width: 17rem;
+  margin-left: 2rem;
 }
 
 .result {
-    margin-left: 2rem;
-    color: blueviolet;
+  margin-left: 2rem;
+  color: royalblue;
 }
 
 .cards {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: flex-start;
-    margin-left: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-left: 2rem;
 }
 
 .card {
 
-    height: 18rem;
-    width: 12rem;
-    max-width: 12rem;
-    max-height: 18rem;
-    margin: .5rem .5rem;
-    background-color: rgb(235, 235, 235);
+  height: 18rem;
+  width: 12rem;
+  max-width: 12rem;
+  max-height: 18rem;
+  margin: .5rem .5rem;
+  background-color: rgb(235, 235, 235);
 
 }
 
 .card:hover {
-    top: -2px;
-    box-shadow: 0 .5rem .5rem #666;
+  top: -2px;
+  box-shadow: 0 .5rem .5rem #666;
 }
 
 .card-header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .card-header-div-title {
-    width: 70%;
-    text-align: center;
+  width: 70%;
+  text-align: center;
 }
 
 .card-header-div-icon-menu {
-    width: 15%;
-    margin-right: .5rem;
+  width: 15%;
+  margin-right: .5rem;
 }
 
 
 .card-turma {
-    color: blueviolet;
-    font-weight: bold;
+  color: royalblue;
+  font-weight: bold;
 }
 
 .card-img {
-    width: 90%;
-    height: 70%;
-    margin: 0% 5%;
-    cursor: pointer;
+  width: 90%;
+  height: 70%;
+  margin: 0% 5%;
+  cursor: pointer;
 }
 
 mat-card-content {
-    max-height: 3.2em;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    text-align: center;
-    margin-top: 1rem;
-    color: blue;
-    font-size: 0.8rem;
-    cursor: pointer;
+  max-height: 3.2em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+  margin-top: 1rem;
+  color: blue;
+  font-size: 0.8rem;
+  cursor: pointer;
 }
 
 @media only screen and (max-width:768px) {
@@ -111,7 +114,8 @@ mat-card-content {
 
   .button-add,
   .form-filter,
-  .result, .form-filter-curso {
+  .result,
+  .form-filter-curso {
     display: block;
     width: 90%;
     margin: auto;
@@ -127,4 +131,3 @@ mat-card-content {
     height: 17rem;
   }
 }
-

@@ -1,10 +1,12 @@
 .container {
   width: 100%;
+  min-height: 100vh;
+  background-color: #1C1C1C;
+  padding: 1rem;
 }
 
 .card {
-  width: 98%;
-  margin: 2rem;
+  width: 100%;
   background-color: rgb(235, 235, 235);
   min-height: 100vh;
 }
@@ -15,7 +17,7 @@
 }
 
 .card-aluno-nome {
-  color: blueviolet;
+  color: royalblue;
 }
 
 .card-aluno-turma {
@@ -48,7 +50,7 @@
 
 .button-more {
   margin: 1rem 0 1rem 1rem;
-  background-color: blueviolet;
+  background-color: royalblue;
   color: white;
   float: right;
   width: 8rem;
@@ -172,7 +174,7 @@
 
 .card-ocorrencia-icon-delete{
   transform: scale(0.9);
-  color: blueviolet;
+  color: royalblue;
   cursor: pointer;
 }
 
@@ -196,7 +198,7 @@
   max-width: 2em;
   min-width: 2em;
   transform: scale(0.8);
-  color: blueviolet;
+  color: royalblue;
   cursor: pointer;
   display: inline;
 

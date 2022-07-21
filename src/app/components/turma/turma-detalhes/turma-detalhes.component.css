@@ -1,20 +1,23 @@
 .container{
   width: 100%;
+  min-height: 100vh;
+  background-color: #1C1C1C;
+  padding-top: 1rem;
 }
 
 .card{
     width: 30rem;
-    margin: 2rem auto 3rem auto;
+    margin: auto;
 }
 
 .list-title {
-    color: blueviolet;
+    color: royalblue;
     font-weight: bold;
     text-align: center;
 }
 
 .item-list-chave {
-    color: blueviolet;
+    color: royalblue;
     margin-right: 1rem;
 }
 

@@ -1,12 +1,14 @@
 .container {
   width: 100%;
+  min-height: 100vh;
+  background-color: #1C1C1C;
+  padding-top: 1rem;
 }
 
 h1 {
-  color: blueviolet;
+  color: royalblue;
   font-weight: bold;
   text-align: center;
-  margin-top: 1rem;
 }
 
 .button-opcoes {
@@ -42,7 +44,7 @@ h1 {
 
 .nomeAluno:hover {
   font-size: 1.1em;
-  color: blueviolet;
+  color: royalblue;
   cursor: pointer;
 }
 
@@ -66,7 +68,7 @@ h1 {
 
 .icon-edit {
   transform: scale(0.8);
-  color: blueviolet;
+  color: royalblue;
 }
 
 .icon-delete {
@@ -91,7 +93,7 @@ h1 {
 
 .card-operacao-icon-edit{
   transform: scale(0.7);
-  color: blueviolet;
+  color: royalblue;
   display: inline;
   cursor: pointer;
 }

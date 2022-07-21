@@ -3,7 +3,8 @@
     justify-content: space-between;
     flex-direction: row;
     height: 2.5rem;
-    background-color: lightslategrey;
+    background-color: #363636;
+
 }
 
 .toolbar-p1 {
@@ -13,7 +14,6 @@
 }
 
 .toolbar-p2 {
-
     display: flex;
     color: white;
     align-items: center;
@@ -75,7 +75,7 @@ input[type="number"] {
 .sideNav {
     width: 13rem;
     color: white;
-    background-color: slategray;
+    background-color: #363636;
 }
 
 .img-logo {

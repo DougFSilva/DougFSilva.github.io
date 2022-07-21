@@ -1,3 +1,8 @@
+.container{
+  width: 100%;
+  background-color: #1C1C1C;
+}
+
 .card {
   margin: 2rem;
   background-color: rgb(235, 235, 235);

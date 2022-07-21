@@ -8,20 +8,20 @@
 
 .title {
     font-weight: bold;
-    color: blueviolet;
+    color: royalblue;
     text-align: center;
 }
 
 .icon {
     transform: scale(2);
-    color: blueviolet;
+    color: royalblue;
     margin: 1rem auto 1rem auto;
 }
 
 .input-image {
     width: 100%;
     margin: 1rem;
-    color: blueviolet;
+    color: royalblue;
 }
 
 .button-voltar {
