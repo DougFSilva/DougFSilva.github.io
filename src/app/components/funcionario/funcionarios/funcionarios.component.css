@@ -1,6 +1,8 @@
 .container {
     width: 100%;
+    min-height: 100vh;
     background-color: #1C1C1C;
+    padding-top: 1rem;
 }
 
 .container-header {
@@ -9,14 +11,12 @@
     flex-direction: column;
     margin-left: 3em;
     align-items: flex-start;
-
 }
 
 h1 {
-    color: blueviolet;
+    color: royalblue;
     font-weight: bold;
     text-align: center;
-    margin-top: 1rem;
 }
 
 .button-add {
@@ -38,7 +38,7 @@ h1 {
 }
 
 .result {
-    color: blueviolet;
+    color: royalblue;
 }
 
 .cards {
@@ -84,12 +84,13 @@ h1 {
 }
 
 .card-empresa {
-    color: blueviolet;
+    color: royalblue;
     font-weight: bold;
 }
 
 .card-menu {
     margin-top: -1em;
+    color: royalblue;
 }
 
 .card-img {
