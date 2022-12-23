@@ -115,7 +115,7 @@ export class CursoDetalhesComponent implements OnInit {
 
   imageUpload(id: number, codigo: string): void {
     let dialog = this.dialog.open(UploadFilesComponent, {
-      data: { folder: "turmas", name: `${id}_${codigo}` },
+      data: { type: "turma", id: id },
     });
     dialog.afterClosed().subscribe((response) => {
       if (response) {

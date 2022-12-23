@@ -23,8 +23,8 @@ export class UploadFilesComponent implements OnInit {
       formData.append("image", image);
       this.uploadingFilesService.uploadFile(
         formData,
-        this.data.folder,
-        `${this.data.name}.JPG`
+        this.data.type,
+        this.data.id
       );
     }
   }

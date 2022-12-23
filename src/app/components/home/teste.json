@@ -1,0 +1,1 @@
+{"commands":[{"command": "createClient", "username":"user0", "password":"Pass1234", "roles":[{"rolename":"role0", "priority":1}]}]}

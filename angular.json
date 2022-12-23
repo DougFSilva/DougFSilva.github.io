@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "be7bcfb9-386f-4b26-baab-2b7cec9d2d52"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -114,7 +117,7 @@
         "deploy": {
           "builder": "angular-cli-ghpages:deploy",
           "options": {
-            "baseHref": "/WPSAMCS/"
+            "baseHref": "/SAMCS-Webpage/"
           }
         }
       }

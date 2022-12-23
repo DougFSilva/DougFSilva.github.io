@@ -38,7 +38,11 @@ export class LoginComponent implements OnInit {
         this.router.navigate(["home"]);
         this.toast.success("Seja bem-vindo(a)!", "Login");
       },
-      () => this.toast.error("Usuário e/ou senha inválidas", "Error")
+      (ex) => {
+        this.toast.error("Usuário e/ou senha inválidas", "Error")
+        console.log(ex)
+      }
+
     );
   }
   validaCampos(): boolean {
